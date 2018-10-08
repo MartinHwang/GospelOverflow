@@ -1,0 +1,126 @@
+<div fxLayout="row" fxLayout="row wrap">
+  <div *ngFor="let dash of dashCardData" fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
+    <app-dashcard [dashData]="dash"></app-dashcard>
+  </div>
+</div>
+
+
+<div fxLayout="row" fxLayout="row wrap">
+  <div class="col-lg-9 col-md-9 col-sm-12">
+    <div class="card-l">   
+      <div class="thumbnail-l orange">
+          <div class="mt-4 ml-3">
+              <h4 class="card-title ml-3"><i class="material-icons mr-3 md-24">assessment</i>Member Stats</h4>
+          </div>
+      </div>        
+      <div class="piegraph">
+        <google-chart [data]="pieChartData"></google-chart> 
+      </div>
+      <div class="content">      
+        <h1>Why you Need More Magnesium in Your Daily Diet</h1>          
+        <div class="author mt-2"><img src="assets/img/m_01.jpeg"/>
+          <h2>Daniel Song</h2>
+        </div>
+        <div class="separator"></div>
+        <p>Magnesium is one of the six essential macro-minerals that is required by the body for energy 
+          production and synthesis of protein and enzymes. 
+          It contributes to the development of bones and most importantly it is responsible for synthesis of your DNA and RNA. 
+          A new report that has appeared in theBritish Journal of Cancer, 
+          gives you another reason to add more magnesium to your diet...</p>          
+      </div>         
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-3 col-sm-12">
+      <div class="card-s card-stats">
+        <div class="thumbnail-s red">
+          <div class="mt-4 ml-3">
+              <h4 class="card-title ml-3"><i class="material-icons mr-3">people</i>Members</h4>
+          </div>
+        </div>
+        <div class="bargraph">
+          <google-chart [data]="barChartData"></google-chart> 
+          <p class="ml-3">
+            <span class="text-success"><i class="fa fa-long-arrow-up"></i> 12% </span> increase in 2017.
+          </p> 
+          <p class="ml-2">
+            <span class="card-footer-desc"><i class="material-icons md-18 mr-1">access_time</i> updated 1 year ago</span>
+          </p>  
+        </div>          
+      </div>
+  </div>
+
+  <div class="col-lg-4 col-md-12 col-sm-12">
+    <div class="card-m card-stats">
+      <div class="thumbnail-m green">
+        <div class="mt-4 ml-3">
+            <h4 class="card-title ml-3"><i class="material-icons mr-3">face</i>New Member</h4>
+        </div>
+      </div>
+      <div class="ml-4">
+        <table>
+          <thead>
+            <th>No</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>CellPhone</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let member of members;index as i">
+              <td>{{i+1}}</td>
+              <td>{{member.firstName}}</td>
+              <td>{{member.lastName}}</td>
+              <td>{{member.cellphone}}</td>
+            </tr>
+          </tbody>              
+        </table>
+      </div>          
+      <a class="pl-4 mt-5 nav-link" routerLinkActive="active" [routerLink]="['/home/members']">            
+        <span>View More...</span>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-12 col-sm-12">
+    <div class="card-m card-stats ml-1">
+      <div class="thumbnail-m purple">
+        <div class="mt-4 ml-3">
+            <h4 class="card-title ml-3"><i class="material-icons mr-3">event</i>Events</h4>
+        </div>
+      </div>                    
+      <div class="mt-2">
+        <img src="assets/img/icon-calendar.png" class="calendar" />
+        <span class="month">{{month}}</span>
+        <span class="date">{{date}}</span>       
+      </div>
+      <div>
+        <p class="content-m">{{description}}</p>
+      </div>      
+      <a class="pl-4 nav-link" routerLinkActive="active" [routerLink]="['/home/events']">            
+        <span>View More...</span>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-12 col-sm-12">
+    <div class="card-m card-stats ml-1">
+      <div class="thumbnail-m pink">
+        <div class="mt-4 ml-3">
+            <h4 class="card-title ml-3"><i class="material-icons mr-3">monetization_on</i>Revenue</h4>
+        </div>
+      </div>
+      <div class="linegraph">
+        <google-chart [data]="lineChart"></google-chart> 
+        <p class="ml-3">
+          <span class="text-success"><i class="fa fa-long-arrow-up"></i> 21% </span> increase in this week.
+        </p> 
+        <p  class="ml-2">
+          <span class="card-footer-desc"><i class="material-icons md-18 mr-1">access_time</i> updated 1 week ago</span>
+        </p>  
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+
+
+

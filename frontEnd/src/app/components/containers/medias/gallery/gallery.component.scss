@@ -1,0 +1,28 @@
+.jumbotron {
+    margin-top: 30px;
+}
+
+// how to get rid of scrollbar of Material tabs
+::ng-deep .mat-tab-body-content {
+    overflow: visible !important;
+}
+
+.tab-icon {
+    margin-right: 8px;
+}
+
+ul {
+    padding: 0;
+    width: 110%;
+    margin: 20px auto;
+}
+
+li {
+    display: inline;
+}
+
+.tn {
+    margin: 6px;
+    border: 4px solid #eee;
+    box-shadow: #555 1px 1px 8px 1px;
+}

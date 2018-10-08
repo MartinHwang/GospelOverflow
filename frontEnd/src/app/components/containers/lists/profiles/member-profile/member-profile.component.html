@@ -1,0 +1,128 @@
+ <div class="jumbotron">
+    <h2 class="page-header">
+      <strong class="mr-3">{{data.username}} Information</strong>    
+    </h2>    
+      
+    <form class="member-form" #memberForm="ngForm" (ngSubmit)="onSubmit(memberForm)">
+      <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="data._id">
+      <mat-accordion class="example-headers-align">
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Personal data
+              </mat-panel-title>
+              <mat-panel-description>
+                Type church member's information
+                <mat-icon>account_circle</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+        
+            <mat-form-field class="member-30-width">            
+              <input matInput placeholder="First Name" name="firstName" #firstName="ngModel" [(ngModel)]="data.firstName" required>
+            </mat-form-field>
+  
+            <mat-form-field class="member-30-width">
+              <input matInput placeholder="Last Name" name="lastName" #lastName="ngModel" [(ngModel)]="data.lastName" required>
+            </mat-form-field>
+      
+            <mat-form-field class="member-20-width">
+              <input matInput placeholder="Gender" name="gender" #gender="ngModel" [(ngModel)]="data.gender">
+            </mat-form-field>
+      
+            <mat-form-field class="member-20-width">
+              <input matInput placeholder="Date" name="birth" #birth="ngModel" [(ngModel)]="data.birth">
+            </mat-form-field>
+    
+            <mat-form-field class="member-40-width">
+              <input matInput placeholder="Email" name="email" #email="ngModel" [(ngModel)]="data.email" required>
+            </mat-form-field>
+      
+            <mat-form-field class="member-30-width">
+              <span matPrefix>+1 &nbsp;</span>
+              <input type="tel" matInput placeholder="Cell Phone" name="cellphone" #cellphone="ngModel" [(ngModel)]="data.cellphone" required>
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field>
+    
+            <mat-form-field class="member-30-width">
+              <span matPrefix>+1 &nbsp;</span>
+              <input type="tel" matInput placeholder="Telephone" name="phone" #phone="ngModel" [(ngModel)]="data.phone">
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field>
+    
+            <mat-form-field class="member-60-width">
+              <input matInput placeholder="Address" name="address" #address="ngModel" [(ngModel)]="data.address">
+            </mat-form-field>
+    
+            <mat-form-field class="member-40-width">
+              <input matInput #postalCode maxlength="7" placeholder="Postal Code" name="postalCode" #postalCode="ngModel" [(ngModel)]="data.postalCode">
+              <mat-hint align="end">{{postalCode.value.length}} / 6</mat-hint>
+            </mat-form-field> 
+            
+          </mat-expansion-panel>
+        
+          <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Social Data
+                </mat-panel-title>
+                <mat-panel-description>
+                  Type workplace information of member
+                  <mat-icon>work</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+        
+            <mat-form-field class="member-40-width">
+              <input matInput placeholder="Job" name="job" #job="ngModel" [(ngModel)]="data.job">
+            </mat-form-field> 
+      
+            <mat-form-field class="member-60-width">
+              <input matInput placeholder="Workplace" name="workplace" #workplace="ngModel" [(ngModel)]="data.workplace">
+            </mat-form-field> 
+            
+          </mat-expansion-panel>
+        
+          <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Church Data
+                </mat-panel-title>
+                <mat-panel-description>
+                  Type activity of member in church
+                  <mat-icon>home</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+    
+            <mat-form-field class="member-40-width">
+              <input matInput placeholder="Position" name="position" #position="ngModel" [(ngModel)]="data.position">
+            </mat-form-field>
+      
+            <mat-form-field class="member-40-width">
+              <input matInput placeholder="Service Dept." name="serviceDept" #serviceDept="ngModel" [(ngModel)]="data.serviceDept">
+            </mat-form-field> 
+            
+            <mat-form-field class="member-20-width">
+              <input matInput placeholder="Service Group" name="serviceGroup" #serviceGroup="ngModel" [(ngModel)]="data.serviceGroup">
+            </mat-form-field>
+          
+            <mat-form-field class="member-full-width">
+              <textarea matInput placeholder="Comment" name="comment" #comment="ngModel" [(ngModel)]="data.comment"></textarea>
+            </mat-form-field>            
+            
+          </mat-expansion-panel>
+        
+        </mat-accordion>
+    
+        <div class="s12 mt-2">        
+          <button class="btn btn-primary mr-2 ml-0" type="button" (click)="close()">Close</button>
+          <button class="btn btn-primary" type="submit" cdkFocusInitial>Edit</button>        
+        </div>
+    
+      </form>
+    </div>
+
+
+
+    
+    
+  
+  

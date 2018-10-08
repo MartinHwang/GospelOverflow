@@ -1,0 +1,345 @@
+@import '../../../../assets/scss/test.scss';
+
+.grid-container {
+  margin: 80px 20px 0px 20px;  
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+
+.page-header {
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.jumbotron {
+  margin-top: 0px;
+}
+
+
+// ===========================================================
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+/*Just the background stuff */
+span.s1 {
+  position: absolute;
+  top: 0;
+  font-size: 15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #3C4447;
+}
+
+span.s2 {
+  font-weight: 800;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 15rem;
+  text-transform: uppercase;
+  color: #3C4447;
+}
+
+/*My hum... body.. yeah.. */
+body {
+  background-color: #353B3F;
+  font-family: "Roboto", sans-serif;
+}
+
+// /* The card */
+.card-l {
+  position: relative;
+  height: 350px;
+  width: 920px;
+  margin-top: 30px;
+  background-color: #FFF;
+  //-webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  //-moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  //box-shadow: 0px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card-m {
+  position: relative;
+  height: 350px;
+  width: 400px;
+  margin-top: 15px;
+  background-color: #FFF;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card-s {
+  position: relative;
+  height: 350px;
+  width: 300px;
+  margin-top: 30px;
+  padding-right: 50px;
+  background-color: #FFF;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  font-weight: bold;
+  align-items: center;
+}  
+
+.card-footer-desc {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+// /* Image on the left side */
+.thumbnail-l {
+  float: left;
+  position: relative;
+  left: 30px;
+  top: -30px;
+  height: 70px;
+  width: 380px;
+  color: white;
+  //background-color: plum;
+  background-color: orange;
+  //-webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  //-moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  //box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  border-radius:10px;
+}
+
+.thumbnail-m {
+  float: left;
+  position: relative;
+  left: 30px;
+  top: -30px;
+  height: 70px;
+  width: 340px;
+  color: white;
+  //background-color: plum;  
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  border-radius:10px;
+}
+
+.thumbnail-s {
+  float: left;
+  position: relative;
+  left: 30px;
+  top: -30px;
+  height: 70px;
+  width: 240px;
+  color: white;
+  //background-color: plum;
+  background-color: plum;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  border-radius:10px;
+}
+
+.jumbotron {
+  margin-top: 30px;
+}
+
+.piegraph {
+  position: absolute;
+  float: left;
+  margin-top: 100px;
+  width: 450px;
+}
+
+.bargraph {
+  position: absolute;  
+  margin-top: 60px;
+  width: 300px;
+}
+
+.linegraph {
+  position: absolute;  
+  margin-top: 60px;
+  margin-left: 10px;
+  width: 380px;
+}
+
+.content {
+  position: relative;
+  float: left;
+  margin-bottom: 100px;
+  padding-left: 100px;
+  width: 470px;
+}
+
+.content-m {
+  margin: 10px 20px 3px 20px;
+  height: 70px;
+}
+
+.calendar {
+  position: relative;
+  margin-left: 80px;
+  width: 220px;
+  height: 160px;
+  z-index: 1;
+}
+
+.month {
+  position: absolute;
+  margin-top: 25px;
+  margin-left: -150px; 
+  font-size: 1.2em;
+  font-weight: bold;
+  z-index: 90;
+}
+
+.date {
+  position: absolute;  
+  margin-top: 50px;
+  margin-left: -150px; 
+  font-size: 5em;
+  z-index: 100;
+}
+
+/*object-fit: cover; */
+/*object-position: center; */
+img.left {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: auto;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* Right side of the card */
+.right {
+  margin-left: 590px;
+  margin-right: 20px;
+}
+
+h1 {  
+  padding-top: 15px;
+  font-size: 1.3rem;
+  color: #4B4B4B;
+  //color: orange;
+  //color: $color-test;
+}
+
+.author {
+  background-color: #9ECAFF;
+  height: 30px;
+  width: 110px;
+  border-radius: 20px;
+}
+
+.author > img {
+  padding-top: 5px;
+  margin-left: 10px;
+  float: left;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+h2 {
+  padding-top: 8px;
+  margin-right: 6px;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.separator {
+  margin-top: 10px;
+  border: 1px solid #C3C3C3;
+}
+
+p {
+  text-align: justify;
+  padding-top: 10px;
+  font-size: 0.95rem;
+  line-height: 150%;
+  color: #4B4B4B;
+}
+
+/* DATE of release */
+h5 {
+  position: absolute;  
+  //left: 30px;
+  //bottom: -120px;
+  font-size: 6rem;
+  color: #C3C3C3;
+}
+
+h6 {
+  position: absolute;  
+  //left: 30px;
+  //bottom: -55px;
+  font-size: 2rem;
+  color: #C3C3C3;
+}
+
+/* Those futur buttons */
+ul {
+  margin-left: 250px;
+}
+
+li {
+  display: inline;
+  list-style: none;
+  padding-right: 40px;
+  color: #7B7B7B;
+}
+
+/* Floating action button */
+.fab {
+  position: absolute;
+  right: 50px;
+  bottom: -40px;
+  box-sizing: border-box;
+  padding-top: 18px;
+  background-color: #1875D0;  
+  width: 80px;
+  height: 80px;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+
+

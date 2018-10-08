@@ -1,0 +1,69 @@
+<div class="jumbotron">
+  <div class="main-content">
+      <h2> <strong class="mr-3">Gallery</strong> </h2>
+      <mat-tab-group>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="tab-icon">wallpaper</mat-icon>
+            All
+          </ng-template>
+          <!-- Content 1 -->
+          <div class="row">
+            <ul>
+              <li *ngFor="let image of visibleImages">
+                <!-- <img src="{{image.imageUrl}}" class="tn" width="15%" height="15%"> -->
+              </li>
+            </ul>
+          </div>
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="tab-icon">home</mat-icon>
+            Service
+          </ng-template>
+          <!-- Content 2 -->
+          <div class="row">
+            <ul id="thumbnailsList1">
+              <li *ngFor="let image of serviceImages">
+                <!-- <img src="{{image.imageUrl}}" class="tn" width="200" height="160"> -->
+              </li>
+            </ul>
+          </div>
+        </mat-tab>
+      
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="tab-icon">explicit</mat-icon>
+            Event
+          </ng-template>
+          <!-- Content 3 -->
+          <div class="row">
+            <ul id="thumbnailsList2">
+              <li *ngFor="let image of eventImages">
+                <!-- <img src="{{image.imageUrl}}" class="tn" width="200" height="160"> -->
+              </li>
+            </ul>
+          </div>
+        </mat-tab>
+      
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="tab-icon">face</mat-icon>
+            New Member
+          </ng-template>      
+          <!-- Content 4 -->
+          <div class="row">
+            <ul id="thumbnailsList3">
+              <li *ngFor="let image of newMemberImages">
+                <!-- <img src="{{image.imageUrl}}" class="tn" width="200" height="160"> -->
+              </li>
+            </ul>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+  </div> 
+</div>
+
+
+

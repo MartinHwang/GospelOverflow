@@ -1,0 +1,78 @@
+// .sidenav-container {
+//   position: relative;
+//   top: 0;
+//   height: 100vh;
+// }
+
+// .sidenav {
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: 2;
+//   width: 200px;
+//   background-color: white;
+// }
+
+// // z-index: CSS 속성은 엘리먼트와 그 엘리먼트의 자손 엘리먼트들의 z축 순서를 지정한다. 엘리먼트들이 겹쳐졌을 때 z축 순서에 따라 어떤 엘리먼트가 위에 올지 결정된다. z-index가 높은 엘리먼트는 낮은 엘리먼트를 덮는다. 
+// .mat-toolbar {
+//   position: fixed;
+//   top: 0;
+//   z-index: 2;     
+// }
+
+.mat-nav-list {
+  width: 100%;  
+}
+
+
+.spacer {
+  flex: 1 1 auto;
+}
+.icon {
+  padding: 0 14px;
+}
+.profileImg {
+  width: 30px;
+  height: 30px;
+}
+img {
+  padding-left: 3px;
+}
+
+
+
+@mixin auth($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+
+  
+  .sidenav{
+      background: mat-color($primary,400);    
+      overflow: hidden;
+      position: relative;
+      width: 250px;
+  }
+  .drawer{
+      background: mat-color($primary,400);    
+      overflow: hidden;
+      position: relative;
+      width: 80px;
+  }
+  [no-over-flow] {
+      overflow: hidden;
+  }
+  .router-outlet{
+      position: relative;padding: 0px 5px;
+  }
+  .spacer {
+      width: 100%;
+  }
+
+  .logo{
+      font-size: 26px;font-family: Roboto;color:white;margin-top: 8px;
+  }
+}
+
+

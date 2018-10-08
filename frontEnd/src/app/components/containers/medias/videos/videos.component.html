@@ -1,0 +1,37 @@
+<div class="jumbotron">
+  <h2><strong class="mr-3">Video Player</strong></h2>
+  <div class="row">
+    <div class="col-sm-9">
+
+      <div *ngIf="!hideNewVideo">
+        <h4>New Video</h4>
+        <form #form="ngForm" (ngSubmit)="onSubmitNewVideo(form.value)" class="well">
+          <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" name="title" ngModel required>
+          </div>
+          <div class="form-group">
+            <label>Url</label>
+            <input type="text" class="form-control" name="url" ngModel required>
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <input type="text" class="form-control" name="description" ngModel required>
+          </div>
+          <button type="submit" class="btn btn-success">Save</button>
+        </form>
+      </div>
+
+      <app-vdieo-detail (updateVideoEvent)="onUpdateVideoEvent($event)" (deleteVideoEvent)="onDeleteVideoEvent($event)"
+        *ngIf="selectedVideo && hideNewVideo" 
+        [video]="selectedVideo">
+      </app-vdieo-detail>
+    </div>
+
+    <div class="col-sm-3">
+      <button (click)="newVideo()" style="margin-bottom:2px;" type="button" class="btn btn-success btn-block">+New Video</button>
+      <app-video-list (SelectVideo)="onSelectVideo($event)" [videos]="videos"></app-video-list>
+    </div>
+    
+  </div>
+</div>

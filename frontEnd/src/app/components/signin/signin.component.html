@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <div id="formContent">
+    <h2 class="underlineHover"><strong>Sign In</strong></h2>
+    <div>
+      <!-- <img src="assets/img/single_user.png" id="icon" alt="User Icon" /> -->
+      <!-- <i class="material-icons">person</i> -->
+      <i class="fas fa-sign-in-alt fa-10x"></i>
+    </div>
+    <form class="formwidth" (submit)="onSignInSubmit()"> 
+      <!-- <mat-form-field>
+        <input matInput placeholder="Email" name="email" id="email" [(ngModel)]="email" [pattern]="emailRegex" #email="ngModel">
+      </mat-form-field><br>
+
+      <mat-form-field hintLabel="At least 4 characters">
+        <input matInput type="password" placeholder="Password" name="password" id="password" [(ngModel)]="password" #password="ngModel">
+        <mat-hint align="end">{{password.value?.length || 0}}/4</mat-hint>
+      </mat-form-field><br><br> -->
+
+      <div class="form-group">
+        <div class="input-field ml-5 mr-5">
+            <label for="email">Email</label>
+          <input type="text" class="form-control" [(ngModel)]="email" id="email" name="email">          
+        </div>         
+      </div>
+      <div class="form-group">
+        <div class="input-field ml-5 mr-5">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" [(ngModel)]="password" id="password" name="password">            
+        </div>      
+      </div>
+      <div>
+        <a [routerLink]="['/contact']">Forgot Password?</a>
+      </div>
+
+      <input mdbBtn type="submit" color="primary" class="waves-light" value="Sing In"> 
+      <button mdbBtn (click)="goBack()" type="button" color="primary" class="waves-light">Go Back</button>        
+    </form>    
+
+    <p>Not a member?
+      <a [routerLink]="['/register']">Register</a>
+    </p>
+   
+  </div>
+</div>
+

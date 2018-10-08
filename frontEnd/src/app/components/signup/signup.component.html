@@ -1,0 +1,87 @@
+<!-- case 1 -->
+<!-- <div class="wrapper">
+  <div id="formContent">
+    <h2 class="underlineHover"><strong>Sign Up</strong></h2>
+    <div>
+      <img src="assets/img/users.png" id="icon" class="img-fluid w-50 h-50" />
+    </div>
+
+    <form #signupForm="ngForm" (ngSubmit)="signupForm.valid && onSubmit(signupForm)"> 
+
+      <mat-form-field>
+        <input matInput placeholder="Name" id="name" [(ngModel)]="userService.selectedUser.name" name="name" #name="ngModel">
+      </mat-form-field><br>
+
+      <mat-form-field>
+        <input matInput placeholder="Username" id="username" [(ngModel)]="userService.selectedUser.username" name="username" #username="ngModel">
+      </mat-form-field><br>
+
+      <mat-form-field>
+        <input matInput placeholder="Email" id="email" [(ngModel)]="userService.selectedUser.email" [pattern]="emailRegex" name="email" #email="ngModel">
+      </mat-form-field><br>
+
+      <mat-form-field hintLabel="At least 4 characters">
+        <input matInput type="password" placeholder="Password" id="password" [(ngModel)]="userService.selectedUser.password" name="password" #password="ngModel">
+        <mat-hint align="end">{{password.value?.length || 0}}/4</mat-hint>
+      </mat-form-field><br><br>
+
+      <input mdbBtn type="submit" color="primary" class="waves-light" value="Sing Up"> 
+      <button mdbBtn (click)="goBack()" type="button" color="primary" class="waves-light">Go Back</button>        
+    </form>
+
+    <div class="alert" *ngIf="serverErrorMessages">
+      {{serverErrorMessages}}
+    </div>
+    
+  </div>
+</div> -->
+
+<!-- case 2 -->
+<div class="wrapper">
+  <div id="formContent">
+    <h2 class="underlineHover"><strong>Sign Up</strong></h2>
+    <div>
+      <!-- <img src="assets/img/users.png" /> -->
+      <i class="far fa-user-circle fa-10x"></i>
+    </div>
+
+    <form class="formwidth" (ngSubmit)="onSubmit()"> 
+
+      <div class="form-group">
+        <div class="input-field ml-5 mr-5">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" [(ngModel)]="name" id="name" name="name">          
+        </div>         
+      </div><br>
+
+      <div class="form-group">
+        <div class="input-field ml-5 mr-5">
+            <label for="username">User Name</label>
+            <input type="text" class="form-control" [(ngModel)]="username" id="username" name="username">          
+        </div>         
+      </div><br>
+
+      <div class="form-group">
+        <div class="input-field ml-5 mr-5">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" [(ngModel)]="email" id="email" name="email">          
+        </div>         
+      </div><br>
+
+      <div class="form-group">
+        <div class="input-field ml-5 mr-5">
+            <label for="password">Password</label>
+            <input type="text" class="form-control" [(ngModel)]="password" id="password" name="password">          
+        </div>         
+      </div><br>
+
+      <input mdbBtn type="submit" color="primary" class="waves-light" value="Sing Up"> 
+      <button mdbBtn (click)="goBack()" type="button" color="primary" class="waves-light">Go Back</button>        
+    </form>
+
+    <div class="alert" *ngIf="serverErrorMessages">
+      {{serverErrorMessages}}
+    </div>
+    
+  </div>
+</div>

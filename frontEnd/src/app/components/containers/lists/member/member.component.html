@@ -1,0 +1,221 @@
+<div class="jumbotron">
+<h2 class="page-header">
+  <strong class="mr-3">Member List</strong>  
+</h2>
+
+<form class="member-form" #memberForm="ngForm" (ngSubmit)="onSubmit(memberForm)">
+  <mat-accordion class="example-headers-align">
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Personal data
+          </mat-panel-title>
+          <mat-panel-description>
+            Type church member's information            
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+    
+        <mat-form-field class="member-30-width">
+          <input matInput placeholder="First Name" 
+          #firstName="ngModel" [(ngModel)]="memberService.selectedMember.firstName" name="firstName">           
+        </mat-form-field>          
+ 
+        <mat-form-field class="member-30-width">
+          <input matInput placeholder="Last Name" 
+          #lastName="ngModel" [(ngModel)]="memberService.selectedMember.lastName" name="lastName">
+        </mat-form-field>
+
+        <mat-form-field class="member-20-width">
+          <input type="text" placeholder="Gender" matInput 
+          [(ngModel)]="memberService.selectedMember.gender" name="gender" [matAutocomplete]="gender">
+          <mat-autocomplete #gender="matAutocomplete">
+            <mat-option *ngFor="let gender of optionsGender" [value]="gender">
+              {{gender}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+  
+        <mat-form-field class="member-20-width">
+          <input matInput placeholder="Birth" [matDatepicker]="picker" (focus)="picker.open()" 
+          #birth="ngModel" [(ngModel)]="memberService.selectedMember.birth" name="birth" readonly>
+        </mat-form-field>
+        <mat-datepicker #picker></mat-datepicker>  
+
+        <mat-form-field class="member-60-width">
+          <input matInput placeholder="Email" 
+          #email="ngModel" [(ngModel)]="memberService.selectedMember.email" name="email">
+        </mat-form-field>
+  
+        <mat-form-field class="example-40-width">
+          <span matPrefix>+1 &nbsp;</span>
+          <input type="tel" matInput placeholder="Cell Phone" 
+          #cellphone="ngModel" [(ngModel)]="memberService.selectedMember.cellphone" name="cellphone">
+          <mat-icon matSuffix>mode_edit</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-40-width">
+          <span matPrefix>+1 &nbsp;</span>
+          <input type="tel" matInput placeholder="Phone" 
+          #phone="ngModel" [(ngModel)]="memberService.selectedMember.phone" name="phone">
+          <mat-icon matSuffix>mode_edit</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="member-60-width">
+          <input matInput placeholder="Address" 
+          #address="ngModel" [(ngModel)]="memberService.selectedMember.address" name="address">
+        </mat-form-field>
+
+        <mat-form-field class="member-40-width">
+          <input matInput #postalCode maxlength="7" placeholder="Postal Code" 
+          #postalCode="ngModel" [(ngModel)]="memberService.selectedMember.postalCode" name="postalCode">
+          <mat-hint align="end">{{postalCode.value.length}} / 6</mat-hint>
+        </mat-form-field> 
+        
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Social Data
+            </mat-panel-title>
+            <mat-panel-description>
+              Type workplace information of member              
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+    
+        <mat-form-field class="member-40-width">
+          <input matInput placeholder="Job" 
+          #job="ngModel" [(ngModel)]="memberService.selectedMember.job" name="job">
+        </mat-form-field> 
+  
+        <mat-form-field class="member-60-width">
+          <input matInput placeholder="Workplace" 
+          #workplace="ngModel" [(ngModel)]="memberService.selectedMember.workplace" name="workplace">
+        </mat-form-field> 
+        
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Church Data
+            </mat-panel-title>
+            <mat-panel-description>
+              Type activity of member in church              
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+        <mat-form-field class="member-40-width">
+          <!-- <input matInput placeholder="Position" 
+          #position="ngModel" [(ngModel)]="memberService.selectedMember.position" name="position"> -->
+
+          <input type="text" placeholder="Position" matInput 
+          [(ngModel)]="memberService.selectedMember.position" name="position" [matAutocomplete]="position">
+          <mat-autocomplete #position="matAutocomplete">
+            <mat-option *ngFor="let position of optionsPosition" [value]="position">
+              {{position}}
+            </mat-option>
+          </mat-autocomplete>
+
+        </mat-form-field>
+  
+        <mat-form-field class="member-40-width">
+          <!-- <input matInput placeholder="Service Dept." 
+          #serviceDept="ngModel" [(ngModel)]="memberService.selectedMember.serviceDept" name="serviceDept"> -->
+
+          <input type="text" placeholder="Service Dept" matInput 
+          [(ngModel)]="memberService.selectedMember.serviceDept" name="serviceDept" [matAutocomplete]="serviceDept">
+          <mat-autocomplete #serviceDept="matAutocomplete">
+            <mat-option *ngFor="let serviceDept of optionsServiceDept" [value]="serviceDept">
+              {{serviceDept}}
+            </mat-option>
+          </mat-autocomplete>
+
+        </mat-form-field> 
+        
+        <mat-form-field class="member-20-width">
+          <!-- <input matInput placeholder="Service Group" 
+          #serviceGroup="ngModel" [(ngModel)]="memberService.selectedMember.serviceGroup" name="serviceGroup"> -->
+
+          <input type="text" placeholder="Service Group" matInput 
+          [(ngModel)]="memberService.selectedMember.serviceGroup" name="serviceGroup" [matAutocomplete]="serviceGroup">
+          <mat-autocomplete #serviceGroup="matAutocomplete">
+            <mat-option *ngFor="let serviceGroup of optionsServiceGroup" [value]="serviceGroup">
+              {{serviceGroup}}
+            </mat-option>
+          </mat-autocomplete>
+
+        </mat-form-field>
+      
+        <mat-form-field class="member-full-width">
+          <textarea matInput placeholder="Comment" 
+          #comment="ngModel" [(ngModel)]="memberService.selectedMember.comment" name="comment"></textarea>
+        </mat-form-field>            
+        
+      </mat-expansion-panel>
+    
+    </mat-accordion>
+
+    <div class="s12 mt-2">        
+      <button class="btn btn-primary mr-2 ml-0" type="button" (click)="resetForm(memberForm)">Reset</button>
+      <button class="btn btn-primary" type="submit" >Submit</button>        
+    </div>
+
+  </form>
+</div>
+
+<table mat-table [dataSource]="dataSource" class="member-full-width"> 
+  
+  <ng-container matColumnDef="no">
+    <th mat-header-cell *matHeaderCellDef> NO. </th>
+    <td mat-cell *matCellDef="let element"> {{dataSource.filteredData.indexOf(element) + 1}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef> First Name </th>
+    <td mat-cell *matCellDef="let member"> {{member.firstName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="lastName">
+    <th mat-header-cell *matHeaderCellDef> Last Name </th>
+    <td mat-cell *matCellDef="let member"> {{member.lastName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> Position </th>
+    <td mat-cell *matCellDef="let member"> {{member.position}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let member"> {{member.email}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="cellphone">
+    <th mat-header-cell *matHeaderCellDef> Cell Phone </th>
+    <td mat-cell *matCellDef="let member"> {{member.cellphone}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef=" ">
+    <th mat-header-cell *matHeaderCellDef>  </th>
+    <td mat-cell *matCellDef="let member"> 
+      <a class="action-btn" (click)="onEdit(member.email)">
+        <i class="material-icons">edit</i>
+      </a>
+      <a class="action-btn" (click)="onDelete(member._id)">
+        <i class="material-icons">delete</i>
+      </a> 
+    </td>
+  </ng-container>  
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+    
+    
+
+
+
+
+
+

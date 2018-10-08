@@ -1,0 +1,74 @@
+<div class="jumbotron">
+  <h2 class="page-header">
+    <strong class="mr-3">{{data.username}} Information</strong>    
+  </h2>    
+    
+  <form class="event-form" #eventForm="ngForm" (ngSubmit)="onSubmit(eventForm)">
+    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="data._id">
+    <mat-accordion class="example-headers-align">
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Update Event
+          </mat-panel-title>
+          <mat-panel-description>
+            Change event information
+            <mat-icon>account_circle</mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+    
+        <mat-form-field class="member-40-width">            
+          <input matInput placeholder="Contact Person" name="contactPerson" #contactPerson="ngModel" [(ngModel)]="data.contactPerson">
+        </mat-form-field>
+
+        <mat-form-field class="member-40-width">
+          <input matInput placeholder="Email" name="email" #email="ngModel" [(ngModel)]="data.email">
+        </mat-form-field>
+  
+        <mat-form-field class="member-20-width">
+          <span matPrefix>+1 &nbsp;</span>
+          <input matInput placeholder="Cell Phone" name="cellphone" #cellphone="ngModel" [(ngModel)]="data.cellphone">
+          <mat-icon matSuffix>mode_edit</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="member-30-width">
+          <input type="text" placeholder="Category" matInput name="category" #category="ngModel" [(ngModel)]="data.category" [matAutocomplete]="category">
+          <mat-autocomplete #category="matAutocomplete">
+            <mat-option *ngFor="let event of optionsEvent" [value]="event">
+              {{event}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+        <mat-form-field class="member-40-width">
+          <input matInput placeholder="Title" name="title" #title="ngModel" [(ngModel)]="data.title">
+        </mat-form-field>
+
+        <mat-form-field class="member-30-width">
+          <input matInput placeholder="Event Date" name="eventDate" #eventDate="ngModel" [(ngModel)]="data.eventDate" 
+          [matDatepicker]="picker" (focus)="picker.open()" 
+          ngModel name="eventDate" readonly>
+        </mat-form-field>
+        <mat-datepicker #picker></mat-datepicker>         
+        
+        <mat-form-field class="member-full-width">
+          <input matInput placeholder="Description" name="description" #description="ngModel" [(ngModel)]="data.description">
+        </mat-form-field>        
+        
+      </mat-expansion-panel>      
+    </mat-accordion>
+
+    <div class="s12 mt-2">        
+      <button class="btn btn-primary mr-2 ml-0" type="button" (click)="close()">Close</button>
+      <button class="btn btn-primary" type="submit" cdkFocusInitial>Edit</button>        
+    </div>
+
+  </form>
+</div>
+
+
+
+    
+    
+  
+  
