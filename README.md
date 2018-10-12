@@ -10,6 +10,56 @@ This project is for management of church member's information.
 * Table
 ![responsive](https://user-images.githubusercontent.com/43972187/46877053-d946e980-ce0d-11e8-98b4-4a406bbc5988.JPG)
 
+# FrontEnd Directory Structure
+src
+├───assets
+│   ├───img
+│   └───scss
+├───environments
+└───app
+    ├───components
+    │   ├───home
+    │   ├───signin
+    │   ├───signup
+    │   └───containers
+    │       ├───dashboard
+    │       │   └───dashcard
+    │       ├───navbar
+    │       ├───layout
+    │       │   ├───fullscreen
+    │       │   ├───sidemenu
+    │       │   ├───sidemenu-item
+    │       │   ├───toolbar
+    │       │   └───user-menu
+    │       ├───tables
+    │       │   ├───fixed
+    │       │   └───rsponsive
+    │       ├───medias
+    │       │   ├───gallery
+    │       │   │   └───details
+    │       │   └───videos
+    │       │       ├───vdieo-detail
+    │       │       └───video-list
+    │       ├───lists
+    │       │   ├───event
+    │       │   │   └───event-datail
+    │       │   ├───member
+    │       │   ├───user
+    │       │   ├───profiles
+    │       │   │   ├───member-profile
+    │       │   │   └───user-profile
+    │       │   └───dialog-member
+    │       │       ├───list-member
+    │       │       └───popup-member
+    │       └───tasks
+    │           ├───dailytask
+    │           ├───weeklytask
+    │           └───monthlytask
+    ├───services
+    ├───models
+    ├───modules
+    └───guards
+
 # Angular Version
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
