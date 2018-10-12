@@ -11,6 +11,7 @@ This project is for management of church member's information.
 ![responsive](https://user-images.githubusercontent.com/43972187/46877053-d946e980-ce0d-11e8-98b4-4a406bbc5988.JPG)
 
 ## FrontEnd Directory Structure
+<pre><code>
 src
 ├───assets
 │   ├───img
@@ -59,6 +60,7 @@ src
     ├───models
     ├───modules
     └───guards
+</code></pre>
 
 # Angular Version
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
