@@ -3,6 +3,10 @@ This project is for management of church member's information.
 
 ![dashboard](https://user-images.githubusercontent.com/43972187/46876871-6a699080-ce0d-11e8-869d-1f83d5f1f032.JPG)
 
+![member](https://user-images.githubusercontent.com/43972187/46877020-c6341980-ce0d-11e8-837f-556820a7f9e0.JPG)
+
+![responsive](https://user-images.githubusercontent.com/43972187/46877053-d946e980-ce0d-11e8-98b4-4a406bbc5988.JPG)
+
 # Angular Version
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
