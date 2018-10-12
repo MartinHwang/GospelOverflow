@@ -1,7 +1,7 @@
 # GospelOverflow [MEAN Stack Project]
 This project is for management of church member's information.
 
-<img src="../frontEnd/src/assets/img/dashboard.JPG" alt="Dashboard"/>
+<img src="../frontEnd/src/assets/img/gof3.PNG" alt="Dashboard"/>
 
 # Angular Version
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
