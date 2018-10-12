@@ -1,6 +1,7 @@
 # GospelOverflow [MEAN Stack Project]
 This project is for management of church member's information.
 
+## Screenshot
 * Dashboard
 ![dashboard](https://user-images.githubusercontent.com/43972187/46876871-6a699080-ce0d-11e8-869d-1f83d5f1f032.JPG)
 
@@ -10,7 +11,7 @@ This project is for management of church member's information.
 * Table
 ![responsive](https://user-images.githubusercontent.com/43972187/46877053-d946e980-ce0d-11e8-98b4-4a406bbc5988.JPG)
 
-* Directory Structure of FrontEnd
+## Directory Structure of FrontEnd
 <pre><code>
 src
 ├───assets
