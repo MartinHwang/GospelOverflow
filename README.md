@@ -10,7 +10,7 @@ This project is for management of church member's information.
 * Table
 ![responsive](https://user-images.githubusercontent.com/43972187/46877053-d946e980-ce0d-11e8-98b4-4a406bbc5988.JPG)
 
-## FrontEnd Directory Structure
+* Directory Structure of FrontEnd
 <pre><code>
 src
 ├───assets
