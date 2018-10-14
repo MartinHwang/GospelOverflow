@@ -11,6 +11,12 @@ This project is for management of church member's information.
 * Member Insert
 ![member_insert](https://user-images.githubusercontent.com/43972187/46923192-50cd7200-cfe2-11e8-8516-1e8d62139e95.JPG)
 
+* Member Edit
+![member_edit](https://user-images.githubusercontent.com/43972187/46923306-0ea53000-cfe4-11e8-9c1a-2f3f85c917f4.JPG)
+
+* Member Delete
+![member_delete](https://user-images.githubusercontent.com/43972187/46923310-149b1100-cfe4-11e8-9321-9fb1f75096d9.JPG)
+
 * Table
 ![responsive](https://user-images.githubusercontent.com/43972187/46877053-d946e980-ce0d-11e8-98b4-4a406bbc5988.JPG)
 
