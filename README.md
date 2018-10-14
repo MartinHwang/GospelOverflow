@@ -8,6 +8,8 @@ This project is for management of church member's information.
 * Member List
 ![member](https://user-images.githubusercontent.com/43972187/46877020-c6341980-ce0d-11e8-837f-556820a7f9e0.JPG)
 
+![member_insert](https://user-images.githubusercontent.com/43972187/46923192-50cd7200-cfe2-11e8-8516-1e8d62139e95.JPG)
+
 * Table
 ![responsive](https://user-images.githubusercontent.com/43972187/46877053-d946e980-ce0d-11e8-98b4-4a406bbc5988.JPG)
 
