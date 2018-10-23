@@ -1,14 +1,79 @@
 # GospelOverflow [MEAN Stack Project]
+This project is for management of church member's information.
 
+## Screenshot
+* Dashboard
+![dashboard](https://user-images.githubusercontent.com/43972187/46876871-6a699080-ce0d-11e8-869d-1f83d5f1f032.JPG)
+
+* Member List
+![member](https://user-images.githubusercontent.com/43972187/46877020-c6341980-ce0d-11e8-837f-556820a7f9e0.JPG)
+
+* Member Insert
+![member_insert](https://user-images.githubusercontent.com/43972187/46923192-50cd7200-cfe2-11e8-8516-1e8d62139e95.JPG)
+
+* Member Edit
+![member_edit](https://user-images.githubusercontent.com/43972187/46923306-0ea53000-cfe4-11e8-9c1a-2f3f85c917f4.JPG)
+
+* Member Delete
+![member_delete](https://user-images.githubusercontent.com/43972187/46923310-149b1100-cfe4-11e8-9321-9fb1f75096d9.JPG)
+
+* Table
+![responsive](https://user-images.githubusercontent.com/43972187/46877053-d946e980-ce0d-11e8-98b4-4a406bbc5988.JPG)
+
+## Directory Structure of FrontEnd
+<pre><code>
+src
+├───assets
+│   ├───img
+│   └───scss
+├───environments
+└───app
+    ├───components
+    │   ├───home
+    │   ├───signin
+    │   ├───signup
+    │   └───containers
+    │       ├───dashboard
+    │       │   └───dashcard
+    │       ├───navbar
+    │       ├───layout
+    │       │   ├───fullscreen
+    │       │   ├───sidemenu
+    │       │   ├───sidemenu-item
+    │       │   ├───toolbar
+    │       │   └───user-menu
+    │       ├───tables
+    │       │   ├───fixed
+    │       │   └───rsponsive
+    │       ├───medias
+    │       │   ├───gallery
+    │       │   │   └───details
+    │       │   └───videos
+    │       │       ├───vdieo-detail
+    │       │       └───video-list
+    │       ├───lists
+    │       │   ├───event
+    │       │   │   └───event-datail
+    │       │   ├───member
+    │       │   ├───user
+    │       │   ├───profiles
+    │       │   │   ├───member-profile
+    │       │   │   └───user-profile
+    │       │   └───dialog-member
+    │       │       ├───list-member
+    │       │       └───popup-member
+    │       └───tasks
+    │           ├───dailytask
+    │           ├───weeklytask
+    │           └───monthlytask
+    ├───services
+    ├───models
+    ├───modules
+    └───guards
+</code></pre>
+
+# Angular Version
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
