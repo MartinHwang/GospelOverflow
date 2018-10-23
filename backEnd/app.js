@@ -11,8 +11,6 @@ const app = express();
 const users = require('./routes/users');
 const members = require('./routes/members');
 const contacts = require('./routes/contacts');
-const files = require('./routes/common');
-const videos = require('./routes/videos');
 const events = require('./routes/events');
 const tasks = require('./routes/tasks');
 
@@ -29,8 +27,6 @@ require('./config/passport.js')(passport);
 
 app.use('/users', users);
 app.use('/members', members);
-app.use('/files', files);
-app.use('/videos', videos);
 app.use('/events', events);
 app.use('/tasks', tasks);
 
